@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/spaceXListFragment">
+    <fragment
+        android:id="@+id/spaceXListFragment"
+        android:name="mx.gerardo.examen_justo.ui.spacex.SpaceXListFragment"
+        android:label="SpaceXListFragment"
+        tools:layout="@layout/fragment_space_x_list"
+        >
+        <action
+            android:id="@+id/action_spaceXListFragment_to_spaceXDetailFragment"
+            app:destination="@id/spaceXDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/spaceXDetailFragment"
+        android:name="mx.gerardo.examen_justo.ui.spacex.SpaceXDetailFragment"
+        android:label="SpaceXDetailFragment"
+        tools:layout="@layout/fragment_space_x_detail">
+        <action
+            android:id="@+id/action_spaceXDetailFragment_to_spaceXListFragment"
+            app:destination="@id/spaceXListFragment"
+            app:popUpTo="@id/spaceXListFragment" />
+    </fragment>
+</navigation>
